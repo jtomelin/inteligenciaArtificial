@@ -7,8 +7,7 @@ clear all;clc; close all;
 sala = geraAmbiente();%Gerar o ambiente
 mostraAmbiente(sala);%Mostrar o ambiente
 % Obtem as coordenadas randomicas do intervalo [1,4] do aspirador de po. Obtem um valor para X e para Y
-P =  %Coordernadas de inicio do agente aspirador de po
-Y = randi([1 4],1,1);
+P = agenteReativoSimples.obterCoordenadaInicial(); %Coordernadas de inicio do agente aspirador de po
 %pesquise para ver para que servem as funcoes (hold on, hold off e pause)
 hold on; %mantem estatico o ambiente feito anteriormente para posicionar o limpador
 %posizionar o APA nas posicoes estabelecidas anteriormente
