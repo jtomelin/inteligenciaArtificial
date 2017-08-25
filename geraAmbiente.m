@@ -1,4 +1,4 @@
-%Função que cria o ambiente 4x4 (sala) e cria também paredes para a sala 
+%Funcao que cria o ambiente 4x4 (sala) e cria tambem paredes para a sala 
 function sala = geraAmbiente()
 
 dim = 6;

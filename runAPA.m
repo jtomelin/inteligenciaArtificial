@@ -1,4 +1,4 @@
-%Para chamar as fun��es do aspirador de p� automatico (APA) baseado em um agente
+%Para chamar as funcoes do aspirador de po automatico (APA) baseado em um agente
 %reativo simples
 clear all;clc; close all;
 
@@ -6,39 +6,40 @@ clear all;clc; close all;
 %---Ambiente---
 sala = geraAmbiente();%Gerar o ambiente
 mostraAmbiente(sala);%Mostrar o ambiente
-%Coordernadas de in�cio do agente aspirador de p�
-
-%pesquise para ver para que servem as fun��es (hold on, hold off e pause)
-hold on; %mant�m est�tico o ambiente feito anteriormente para posicionar o limpador
-%posizionar o APA nas posi��es estabelecidas anteriormente
+% Obtem as coordenadas randomicas do intervalo [1,4] do aspirador de po. Obtem um valor para X e para Y
+P =  %Coordernadas de inicio do agente aspirador de po
+Y = randi([1 4],1,1);
+%pesquise para ver para que servem as funcoes (hold on, hold off e pause)
+hold on; %mantem estatico o ambiente feito anteriormente para posicionar o limpador
+%posizionar o APA nas posicoes estabelecidas anteriormente
 hold off;
 pause(1);
 
-%se a c�lula estiver suja ent�o retornar� 1, caso contr�rio, 0
+%se a celula estiver suja entao retornara 1, caso contrario, 0
 
-%gera uma vari�vel de estrutura para saber a posi��o e o estado de cada
-%c�lula = struct('nome', valor) - veja a fun��o struct
+%gera uma variavel de estrutura para saber a posicao e o estado de cada
+%celula = struct('nome', valor) - veja a funcao struct
 
 
-%---a��es do agente---
+%---acoes do agente---
 acoesAg= {'acima', 'abaixo', 'esquerda', 'direita', 'aspirar'};
 
 
 %while 1
     
     
-    %escolhe a a��o de acordo com a percep��o - chama fun��o agenteReativoSimples
+    %escolhe a acao de acordo com a percepccao - chama funcao agenteReativoSimples
     
-    %chama a fun��o atualizaAmbiente para atualizar a a��o realizada
+    %chama a funcao atualizaAmbiente para atualizar a acao realizada
     
-    %Mostra na tela as a��es escolhidas e percep��es (veja as fun��es 'disp' e 'num2str')
+    %Mostra na tela as acoes escolhidas e percepccoes (veja as funcoes 'disp' e 'num2str')
     
     
     %mostra o ambiente atualizado
     %posiciona o aspirador no ambiente atualizado
 
     
-    %atualiza a percep��o e o estado depois de concluir a a��o
+    %atualiza a percepccao e o estado depois de concluir a acao
     
 %end
 

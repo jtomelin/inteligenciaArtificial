@@ -1,5 +1,5 @@
-%verifica se há sujeira na sala 
-%retorna 1 se tem sujeira, caso contrário retorna 0
+%verifica se ha sujeira na sala 
+%retorna 1 se tem sujeira, caso contrario retorna 0
 function objObtido=checkObj(sala)
 
 

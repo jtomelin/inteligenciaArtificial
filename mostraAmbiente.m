@@ -1,4 +1,4 @@
-%Função para gerar o ambiente (sala)
+%Funcao para gerar o ambiente (sala)
 function mostraAmbiente(sala)
 
 imagesc(sala);

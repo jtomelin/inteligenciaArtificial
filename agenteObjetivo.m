@@ -1,5 +1,5 @@
-%Gera ações aleatórias no caso em que o quadrado está limpo, senão aspira o
-%pó
+%Gera acoes aleatorias no caso em que o quadrado esta limpo, senao aspira o
+%po
 function acao=agenteObjetivo(percepcao, ObjObtido)
 
 
