@@ -21,7 +21,10 @@ if S == 1
   [Sala, PosX, PosY] = atualizaAmbiente(sala, 4, P(1), P(2));
   P = [PosX, PosY];
   mostraAmbiente(sala);
-  %posicaoAspirador(P(1), P(2));
+  hold on;
+  posicaoAspirador(P(1), P(2));
+  hold off;
+  pause(1);
 end
 
 
