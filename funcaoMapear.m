@@ -1,7 +1,7 @@
 % Esta funcao retorna o mapeamento do agente, 
 % que indica partindo de uma posicao inicial, para onde ele deve ir.
 % Valores da matriz: [ posicao x, posicao y, valor do proximo ]
-% Esboço do andamento:
+% Esboco do andamento:
 % -> -> -> \/
 % /\ \/ <- <- 
 % /\ -> -> \/
