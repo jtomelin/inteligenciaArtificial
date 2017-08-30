@@ -7,16 +7,25 @@ function acao = agenteReativoSimples(percepcao)
   x = 0;
   posIniX = 1;
   posIniY = 1;
+  
   while x == 0
     array = funcaoMapear;
     conjunto = array(posIniX:posIniY, 1:3);
-    if conjunto(1) == P(1) and conjunto(2) == P(2)
-      return conjunto(3);
+    
+    if percepcao.estado == 2
+        acao = 5;
+        break;
+    end 
+    
+    if conjunto(1) == percepcao.X && conjunto(2) == percepcao.Y
+      acao = conjunto(3);
+      break;
     else
       posIniX += 1; posIniY += 1;
+    end
     
     
-    x = 1;
+%    x = 1;
   end
 % Para cada posicao definir as acoes disponiveis (funcaoMapear)
 % acoes = {'acima', 'abaixo', 'esquerda', 'direita', 'aspirar'}

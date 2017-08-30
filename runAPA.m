@@ -13,9 +13,28 @@ P = obterCoordenadaInicial(); %Coordernadas de inicio do agente aspirador de po
 %pesquise para ver para que servem as funcoes (hold on, hold off e pause)
 hold on; %mantem estatico o ambiente feito anteriormente para posicionar o limpador
 posicaoAspirador(P(1), P(2)); %posizionar o APA nas posicoes estabelecidas anteriormente
-agenteReativoSimples(sala(P(1), P(2)));
 hold off;
 pause(1);
+
+i = 0;
+while i < 10
+    percepcao = struct('X', P(1), 'Y', P(2), 'estado', sala(P(1), P(2)));
+    acao = agenteReativoSimples(percepcao);
+    disp(acao);
+    [Sala, PosX, PosY] = atualizaAmbiente(sala, acao, P(1), P(2));
+    mostraAmbiente(Sala);
+    hold on;
+    posicaoAspirador(PosX, PosY);
+    hold off;
+    pause(0.1);
+
+    sala = Sala;
+    P(1) = PosX;
+    P(2) = PosY;
+    
+    i += 1;
+end
+
 
 %se a celula estiver suja entao retornara 1, caso contrario, 0
 

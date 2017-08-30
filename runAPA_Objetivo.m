@@ -20,9 +20,9 @@ if S == 1
   sala(P(1), P(2)) = 0;
   [Sala, PosX, PosY] = atualizaAmbiente(sala, 4, P(1), P(2));
   P = [PosX, PosY];
-  mostraAmbiente(sala);
+  mostraAmbiente(Sala);
   hold on;
-  posicaoAspirador(P(1), P(2));
+  posicaoAspirador(PosX, PosY);
   hold off;
   pause(1);
 end
