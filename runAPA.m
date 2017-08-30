@@ -16,8 +16,8 @@ posicaoAspirador(P(1), P(2)); %posizionar o APA nas posicoes estabelecidas anter
 hold off;
 pause(1);
 
-i = 0;
-while i < 10
+%i = 0;
+while 1
     percepcao = struct('X', P(1), 'Y', P(2), 'estado', sala(P(1), P(2)));
     acao = agenteReativoSimples(percepcao);
     disp(acao);
@@ -32,7 +32,12 @@ while i < 10
     P(1) = PosX;
     P(2) = PosY;
     
-    i += 1;
+    res = checkObj(sala);
+    
+    if res == 0
+      break;
+    end
+    %i += 1;
 end
 
 
