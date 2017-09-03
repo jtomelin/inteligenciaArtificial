@@ -8,6 +8,13 @@ function acao = agenteReativoSimples(percepcao)
   posIniX = 1;
   posIniY = 1;
   
+  res = checkObj(percepcao.sala);
+  
+  if res == 0
+    acao = 6;
+    break;
+  end
+  
   while x == 0
     array = funcaoMapear;
     conjunto = array(posIniX:posIniY, 1:3);

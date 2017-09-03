@@ -41,6 +41,9 @@ else
                 modX = x;
                 modY = y+1;
             end
+       case 6 %acao 6 - NoOp
+         modX = x;
+         modY = y;
     end
 end
 end
