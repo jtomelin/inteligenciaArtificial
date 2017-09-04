@@ -21,10 +21,9 @@ while 1
     %X = valor da posicao x
     %Y = valor da posicao Y
     %estado = Obtem o estado da sala naquele instante, para aquela posicao X e Y.
-    %sala = array que contem a sala
-    percepcao = struct('X', P(1), 'Y', P(2), 'estado', sala(P(1), P(2)), 'sala', sala); 
+    percepcao = struct('X', P(1), 'Y', P(2), 'estado', sala(P(1), P(2))); 
     
-    sPercepcao = sprintf("Percepcao do agente: X = %i, Y = %i, estado = %i", P(1), P(2), sala(P(1), P(2)));
+    sPercepcao = sprintf("Percepcao do agente: X = %i, Y = %i, estado= %i", P(1), P(2), sala(P(1), P(2)));
     disp(sPercepcao); 
     
     %Define a acao a ser tomada
@@ -52,10 +51,13 @@ while 1
     
     iPontos += 1; %Adiciona 1 ponto para cada iteração do APA.
     
-    if acao == 6
+    %Verifica se ha sujeira na sala - Para o programa nao ficar em loop infinito
+    %Para o real funcionamento do agente reativo simples, a condicao abaixo deve ser desconsiderada
+    %Ela e utilizada apenas por conta de problemas com loop infinito causado pelo programa.
+    res = checkObj(sala);
+    if res == 0
       break;
-    end
-    
+    end  
 end
 
 %Exibe a quantidade de pontos obtida pelo APA.

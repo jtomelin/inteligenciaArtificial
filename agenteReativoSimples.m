@@ -8,13 +8,6 @@ function acao = agenteReativoSimples(percepcao)
   posIniX = 1;
   posIniY = 1;
   
-  res = checkObj(percepcao.sala);
-  
-  if res == 0
-    acao = 6;
-    break;
-  end
-  
   while x == 0
     array = funcaoMapear;
     conjunto = array(posIniX:posIniY, 1:3);
@@ -30,13 +23,5 @@ function acao = agenteReativoSimples(percepcao)
     else
       posIniX += 1; posIniY += 1;
     end
-    
-    
-%    x = 1;
   end
-% Para cada posicao definir as acoes disponiveis (funcaoMapear)
-% acoes = {'acima', 'abaixo', 'esquerda', 'direita', 'aspirar'}
-%            1         2          3           4          5
-% TODO: Acrescentar funcao NoOp que equivale ao numero 6.
-
 end

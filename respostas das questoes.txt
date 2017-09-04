@@ -1,0 +1,17 @@
+1) A sua solução e extensivel para um mundo 3 x 3? E para um mundo 6 x 6? Explique sua resposta.
+R.:
+- Agente Reativo simples: a solucao por si so, nao e extensivel para nenhum dos casos, porem, se a mesma pode ser
+facilmente adaptada para estes tamanhos, contato que a funcaoMapear() seja ajustada para estes dois cenarios.
+- Agente Objetivo: Funciona para todos os cenarios, a sua limitacao esta em comecar sempre da posicao 1,1. 
+O processo e feito da seguinte forma: agente caminha para a direita e ao encontrar uma parede, desce um nível, 
+depois o agente caminha para a esquerda, ate encontrar outra parade e descer novamente. 
+Este processo e repetido ate que ou o agente tenha atingido o seu objetivo, ou nao lhe reste mais niveis para descer.
+
+2) E possivel ter todo o espaco limpo efetivamente? justifique sua resposta.
+R.: Para ambos os cenarios sim! Pois o agente reativo simples apenas ira verificar celula a celula e 
+reagira com base na sujeira, ou seja, se tem sujeira, limpa, senao, vai para o proximo e o agente ficara
+repetindo este ciclo incasavelmente.
+No caso do agente objetivo, ele ira parar quando atingir o seu objetivo, ou seja, quando a sala estiver limpa,
+nao necessariamente percorrendo por todos os pontos da sala. Em um mundo real, caso fosse depositado sujeira
+depois que o agente objetivo terminou de limpar, ele teria de ser executado novamente, para limpar este novo
+ponto de sujeira.
